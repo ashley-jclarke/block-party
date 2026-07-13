@@ -1,9 +1,27 @@
 using UnityEngine;
-using UnityEngine.Netcode;
+using Unity.Netcode;
 
 public class NetworkStartUI : MonoBehaviour
 {
-    private void OnGUI() {
-        
+    [SerializeField] private GameObject menu;
+
+    public void Host()
+    {
+        Debug.Log("Start host");
+        NetworkManager.Singleton.StartHost();
+        menu.GetComponent<Renderer>().enabled = false;
+    }
+    public void Client()
+    {
+        Debug.Log("Start client");
+        NetworkManager.Singleton.StartClient();
+        menu.GetComponent<Renderer>().enabled = false;
+
+    }
+    public void Server()
+    {
+        Debug.Log("Start server");
+        NetworkManager.Singleton.StartServer();
+        menu.GetComponent<Renderer>().enabled = false;
     }
 }
