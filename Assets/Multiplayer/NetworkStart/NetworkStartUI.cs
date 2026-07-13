@@ -3,25 +3,28 @@ using Unity.Netcode;
 
 public class NetworkStartUI : MonoBehaviour
 {
-    [SerializeField] private GameObject menu;
+    [SerializeField] private Canvas menu;
 
     public void Host()
     {
         Debug.Log("Start host");
         NetworkManager.Singleton.StartHost();
-        menu.GetComponent<Renderer>().enabled = false;
+        DisableMenu();
     }
     public void Client()
     {
         Debug.Log("Start client");
         NetworkManager.Singleton.StartClient();
-        menu.GetComponent<Renderer>().enabled = false;
-
+        DisableMenu();
     }
     public void Server()
     {
         Debug.Log("Start server");
         NetworkManager.Singleton.StartServer();
-        menu.GetComponent<Renderer>().enabled = false;
+        DisableMenu();
+    }
+    private void DisableMenu()
+    {
+        menu.enabled = false;
     }
 }

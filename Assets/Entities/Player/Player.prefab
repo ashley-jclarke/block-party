@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29c0aa3c6ace3f428fbbb9bce27aeaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NetworkStartUI
-  menu: {fileID: 0}
+  menu: {fileID: 1302595925697489097}
 --- !u!1 &6011254581609968410
 GameObject:
   m_ObjectHideFlags: 0
